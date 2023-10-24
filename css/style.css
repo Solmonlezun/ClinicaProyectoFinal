@@ -11,156 +11,145 @@ body {
     margin:0;
     padding:0;
 }
-body {
-    margin: 0;
-    padding: 0;
-    background: #DDD;
-    font-size: 16px;
-    color: #222;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-  }
-  
-  #login-box {
-    position: relative;
-    margin: 5% auto;
-    width: 600px;
-    height: 400px;
-    background: #FFF;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  }
-  .formulario {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 300px;
-    height: 400px;
-  }
-  
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+    padding:10%;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid color hsl(115, 77%, 44%);
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid hwb(135 3% 9%);
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* -----   Estilos para Validacion  ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
   h1 {
     margin: 0 0 20px 0;
     font-weight: 300;
     font-size: 28px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    display: block;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: 4px;
-    width: 220px;
-    height: 32px;
-    border: none;
-    border-bottom: 1px solid #AAA;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    transition: 0.2s ease;
-  }
-  
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    border-bottom: 2px solid #16a085;
-    color: #16a085;
-    transition: 0.2s ease;
-  }
-  
-  input[type="submit"] {
-    margin-top: 28px;
-    width: 120px;
-    height: 32px;
-    background: #16a085;
-    border: none;
-    border-radius: 2px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: 0.1s ease;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover,
-  input[type="submit"]:focus {
-    opacity: 0.8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: 0.1s ease;
-  }
-  
-  input[type="submit"]:active {
-    opacity: 1;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    transition: 0.1s ease;
-  }
-  
-  .or {
-    position: absolute;
-    top: 180px;
-    left: 280px;
-    width: 40px;
-    height: 40px;
-    background: #DDD;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    line-height: 40px;
-    text-align: center;
-  }
-  
-  .redes {
-    position: absolute;
-    top: 0;
-    right: 0;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 300px;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 0 2px 2px 0;
-  }
-  
-  .redes .logearse {
-    display: block;
-    margin-bottom: 40px;
-    font-size: 28px;
-    color: hsl(221, 84%, 10%);
-    text-align: center;
-  }
-  
-  button.social-signin {
-    margin-bottom: 20px;
-    width: 220px;
-    height: 36px;
-    border: none;
-    border-radius: 2px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    transition: 0.2s ease;
-    cursor: pointer;
-  }
-  
-  button.social-signin:hover,
-  button.social-signin:focus {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: 0.2s ease;
-  }
-  
-  button.social-signin:active {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    transition: 0.2s ease;
-  }
-  
-  button.social-signin.facebook {
-    background: #32508E;
-  }
-  
-  button.social-signin.google {
-    background: #DD4B39;
   }
   
 p{
@@ -177,7 +166,7 @@ h1{
     text-align:center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 2%;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     color: #0f661cf2;
 }
 .parrafoHome {
@@ -511,7 +500,7 @@ li:hover {
     background:#f8f9ff;
     padding: .25rem .75rem;
     border-radius: .2rem;
-{    
+    
 
 }
 
@@ -713,146 +702,201 @@ main .banner-home h1 {
 }
 .oyt-turnos-logos {
     width: 6%;
-}
+} 
 
-@media (min-width: 640px)  {
-    .checkbtn{
-        display: block;
-    }
-    .menu-icon{
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
-    .nav-menu ul{
-        display: block;
-        position: fixed;
-        top:70px;
-        left:-100%;
-        background: #222;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-    }
-    .nav-menu ul li{
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-    .nav-menu ul li:last-child{
-        background: none;
-        padding: 1rem;
-    }
-    .menu li a {
-        padding: 56px;
-    }
-    .menu li ul {
-        min-width: 220px;
-    }
-    header nav {
-        position: static;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: #060404;
-        height: 70px;
+@media(min-width:640px){ 
+    .p{
+     text-align: center;
     }
     
-    .about-us-card--first {
-        margin-top: 25px;
+    .ipresentacion{
+        height: 40%;
+        width: 20%;
+        padding-right: 20px;
+        border-radius: 150px
     }
-
-    .about-us-box-img, .about-us-card--reverse .about-us-description {
-        margin-right: 15px;
-    }    
-
-    .about-us-card {
-        flex-direction: row;
-        padding: 0;
-        margin-bottom: 70px;
+    .doctorxs{
+        display:flex;
     }
-
-    .about-us-description {
-        width: 75%;
-        color: #1e1f1ff2;
-        font-weight: 500;
+    .presentacion{
+        display: inline;
     }
-
-    .about-us-card--reverse {
-        flex-direction: row-reverse;
-}
-
-.professionals-container h2 {
-        margin: 50px; 
-        text-decoration: overline;
-}
-.professionals-container .profesionals {
-        display: flex;
-        align-self: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 90%;
-}
-
-.professionals-container .profesionals .profesionals-card {
-        width: 50%;
-        padding: 20px;
-}
-}
-
-@media(min-width:1024px)
-
-.checkbtn{
-    display: block;
-}
-.menu-icon{
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-.nav-menu ul{
-    display: block;
-    position: fixed;
-    top:70px;
-    left:-100%;
-    background: #222;
-    width: 100%;
-    height: 100vh;
-    right: 0;
-}
-.nav-menu ul li{
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-.nav-menu ul li:last-child{
-    background: none;
-    padding: 1rem;
-}
-.menu li a {
-    padding: 56px;
-}
-.menu li ul {
-    min-width: 220px;
-}
-
+    
+        .oyt-subtitulos {
+            font-size: 30px;
+        }
+        #oyt-subespecialidades-lista {
+            font-size: 17px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        /* OYT CUERPO MEDICO */
+        #oyt-profesionales {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .oyt-profesionales-nombres {
+            font-size: 17px;
+        }
+        .oyt-profesionales-especialidad {
+            font-size: 14px;
+        }
+        .oyt-profesionales-fotos {
+            width: 30%;
+        }
+        
+        /* OYT TURNOS */
+        #oyt-turnos {
+            margin: 20px 160px 80px 160px;
+        }
+        #oyt-turnos-contenido {
+            font-size: 17px;
+        }
+        .oyt-turnos-logos {
+            width: 6%;
+        }
+    
+        /* OB MAIN */
+        .h1obs{
+            font-size: 20px;
+            text-align: center;
+        }
+        .ipresentacion{
+            height: 20%;
+            width: 20%;
+            padding-right: 20px;
+            border-radius: 150px
+        }
+        .doctorxs{
+            display:flex;
+        }
+        .presentacion{
+            display: inline;
+        }
+        .about-us-card--first {
+            margin-top: 25px;
+        }
+    
+        .about-us-box-img, .about-us-card--reverse .about-us-description {
+            margin-right: 15px;
+        }    
+    
+        .about-us-card {
+            flex-direction: row;
+            padding: 0;
+            margin-bottom: 70px;
+        }
+    
+        .about-us-description {
+            width: 75%;
+            color: #1e1f1ff2;
+            font-weight: 500;
+        }
+    
+        .about-us-card--reverse {
+            flex-direction: row-reverse;
+       }
+    
+       /* SERVICES CONTAINER */
+    
+       .services-container {
+            margin-bottom: 70px;
+       }
+    
+       .services-container h2 {
+            font-size: 2rem;
+       }
+    
+       .services-container .services-card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+       }
+    
+       .services-info {
+           width: 40%;
+       }
+    
+       .services-container div .services-info .service-icon {
+            font-size: 2.5rem;
+       }
+    
+       .services-container div .services-info .service-name {
+            font-size: 1.5rem;
+       }
+    
+       /* OUR PROFESSIONALS */
+    
+       .professionals-container h2 {
+            margin: 50px; 
+            text-decoration: overline;
+       }
+    
+       .professionals-container .profesionals {
+            display: flex;
+            align-self: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 90%;
+       }
+    
+       .professionals-container .profesionals .profesionals-card {
+            width: 8%;
+            padding: 1px;
+       }
+     }
+    
+    @media(min-width:1024px){
     .p{
         text-align: center;
+    
     }
     .h1obs{
         font-size: 30px;
     }
     .presentacion{
         display:inline-block
-    
     }
+        .checkbtn{
+            display: block;
+        }
+        .menu-icon{
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .nav-menu ul{
+            display: block;
+            position: fixed;
+            top:70px;
+            left:-100%;
+            background: #222;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+        }
+        .nav-menu ul li{
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .nav-menu ul li:last-child{
+            background: none;
+            padding: 1rem;
+        }
+        .menu li a {
+            padding: 56px;
+        }
+        .menu li ul {
+            min-width: 220px;
+        } 
         /* OYT MENU */
         .oyt-logo-clinica {
             width: 7%;
@@ -906,6 +950,287 @@ main .banner-home h1 {
         text-align: center;
         padding: 55px;
     }
+     }
+     
+    @media (max-width:768px){
+        .checkbtn{
+            display: block;
+        }
+        .menu-icon{
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .nav-menu ul{
+            display: block;
+            position: fixed;
+            top:70px;
+            left:-100%;
+            background: #222;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+        }
+        .nav-menu ul li{
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .nav-menu ul li:last-child{
+            background: none;
+            padding: 1rem;
+        }
+        .menu li a {
+            padding: 56px;
+        }
+        .menu li ul {
+            min-width: 220px;
+        }
+        .doc{
+            padding: 15px;
+            width: 630px;
+            height: 520px;
+        }
+        .card_perfil {
+            width: 768px;
+        }
+        h2 {
+            text-align: center;
+            padding: 15px;
+           font-size: xx-large;
+        }
+    }
+    @media (max-width:900px) { 
+        .logo-p {
+            display: none;
+        }
+        .checkbtn{
+            display: block;
+        }
+        .menu-icon{
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .nav-menu ul{
+            display: block;
+            position: fixed;
+            top:70px;
+            left:-100%;
+            background: #222;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+        }
+        .nav-menu ul li{
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .nav-menu ul li:last-child{
+            background: none;
+            padding: 1rem;
+        }
+        .menu li a {
+            padding: 56px;
+        }
+        .menu li ul {
+            min-width: 220px;
+        }
+    }
+
+/*  */
+@media (min-width: 640px) { 
+    .checkbtn{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .nav-menu ul{
+        display: block;
+        position: fixed;
+        top:70px;
+        left:-100%;
+        background: #222;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    .nav-menu ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .nav-menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+    }
+    .menu li a {
+        padding: 56px;
+    }
+    .menu li ul {
+        min-width: 220px;
+    }
+    
+    .about-us-card--first {
+        margin-top: 25px;
+    }
+
+    .about-us-box-img, .about-us-card--reverse .about-us-description {
+        margin-right: 15px;
+    }    
+
+    .about-us-card {
+        flex-direction: row;
+        padding: 0;
+        margin-bottom: 70px;
+    }
+
+    .about-us-description {
+        width: 75%;
+        color: #1e1f1ff2;
+        font-weight: 500;
+    }
+
+    .about-us-card--reverse {
+        flex-direction: row-reverse;
+}
+
+.professionals-container h2 {
+        margin: 50px; 
+        text-decoration: overline;
+}
+.professionals-container .profesionals {
+        display: flex;
+        align-self: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 90%;
+}
+
+.professionals-container .profesionals .profesionals-card {
+        width: 50%;
+        padding: 20px;
+}
+ }
+
+@media(min-width:1024px){ 
+    .presentacion{
+        display:inline-block
+     }
+        .checkbtn{
+            display: block;
+        }
+        .menu-icon{
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .nav-menu ul{
+            display: block;
+            position: fixed;
+            top:70px;
+            left:-100%;
+            background: #222;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+        }
+        .nav-menu ul li{
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .nav-menu ul li:last-child{
+            background: none;
+            padding: 1rem;
+        }
+        .menu li a {
+            padding: 56px;
+        }
+        .menu li ul {
+            min-width: 220px;
+        } 
+    .p{
+        text-align: center;
+    }
+    .h1obs{
+        font-size: 30px;
+    }
+    .presentacion{
+        display:inline-block
+}
+        /* OYT MENU */
+        .oyt-logo-clinica {
+            width: 7%;
+        }
+        .oyt-menu {
+            font-size: 20px;
+        }
+        .oyt-menu-lista-principal li {
+            padding: 15px;
+        }
+        .oyt-menu-lista-servicios {
+            font-size: 18px;
+        }
+        
+        /* OYT INTRODUCCION */
+        #oyt-titulo {
+            font-size: 40px;
+        }
+        
+        /* OYT CUERPO MEDICO */
+        .oyt-profesionales-nombres {
+            font-size: 18px;
+        }
+        .oyt-profesionales-especialidad {
+            font-size: 15px;
+        }
+        /* OYT TURNOS */
+        #oyt-turnos {
+            margin: 20px 250px 160px 250px;
+            border: solid 20px rgb(29, 105, 124);
+        }
+        #oyt-turnos-imagen {
+            width: 55%;
+            padding: 0px 0px 30px 15px;
+        }
+    
+    .card_perfil {
+        width: 1020px;
+    }
+    .card img {
+        width: 50% ;
+        height: 150%;
+    }
+    .card_nombre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .card h2 {
+        text-align: center;
+        padding: 55px;
+    } 
+    }
+ 
     
     @media (max-width:768px){
         .checkbtn{
@@ -957,10 +1282,24 @@ main .banner-home h1 {
         padding: 15px;
         font-size: xx-large;
         }
-    }
+    } 
     @media (max-width:900px) { 
         .logo-p {
             display: none;
         }
-    }
-    
+    }  
+
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+    .formulario__btn {
+		width: 100%;
+	}
+}
