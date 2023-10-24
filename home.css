@@ -1,0 +1,558 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-sans-serif;;
+
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+header{
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+header section .logo-p {
+    width: 50px;
+    padding-top: 30px;
+}
+
+.logo{
+    width: 7%;
+}
+
+img{
+    display: flex;
+    align-items: center;
+    width:100%;
+    }
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(214, 10%, 14%);
+    padding-left: 2vw;
+}
+
+.cont-ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    background-color:hsl(214, 10%, 14%);
+    padding: 1.5vw;
+    transition:  all .3s ease 0s;
+}
+li a {
+color-text: #dfd8d8;
+}
+
+li:hover {
+    background-color:rgb(6, 107, 151);
+}
+
+.develop {
+    position: relative;
+}
+
+.ul-second {
+    display: none;
+    position: absolute;
+    margin-top: 1.5vw;
+}
+
+.ul-second > li {
+    width: 190px;
+    transform: translateX(-20px);
+    border-bottom:solid 1px #cdcdcd ;
+    text-align: center;
+    background-color: #24252a;
+}
+
+.ul-second > li:hover {
+    background-color: hsl(180, 100%, 100%);
+}
+
+.develop:hover > .ul-second {
+    display: block;
+}
+
+.ul-third {
+    position: absolute;
+    transform: translateX(100%);
+    right: 0;
+    top: 40%;
+    display: none;
+    background-color: #24252a;
+}
+
+.ul-third > li {
+    padding: 1.5vw;
+    border-bottom: solid 1px #fff;
+}
+
+.front:hover > .ul-third {
+    display: block;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+
+}
+.nav-menu li{
+    margin-right: 2rem;
+}
+.nav-menu a{
+    color: hsl(0, 0%, 98%);
+}
+.nav-menu li:last-child{
+    background:#f8f9ff;
+    padding: .25rem .75rem;
+    border-radius: .2rem;
+}
+.nav > li {
+    float: left;
+}
+.nav-menu li ul {
+display:none
+position absolute;
+min-width: 140px;
+}
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+.menu-icon, #check{
+    display: none;
+}
+
+/* --- BANNER DE HOME --- */
+main .banner-home {
+    background-image: url(../Assets/banner-salud2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 270px;
+    position: relative;
+}
+
+main .banner-home h1, span, button {
+    position: absolute;
+    left: 20px;
+}
+
+main .banner-home h1 {
+    bottom: 120px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    color: #0d3b3cf2;
+    text-shadow: 2px 1px 2px #1e3f3fbf;
+}
+
+main .banner-home .banner-icon {
+    margin-left: 20px;
+}
+
+main .banner-home span {
+    bottom: 100px;
+    font-size: 1.5rem;
+    color: #0d3b3cf2;
+    text-shadow: 1px 1px 1px #1e3f3fbf;;
+}
+
+main .banner-home button {
+    bottom: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: #011d1df2;
+    color: white;
+    padding: 12px 30px;
+}
+
+main .banner-home button:hover {
+box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 65%);
+}
+
+
+main .img {
+    background-image: url(./img/hospitalBanner.jpg);
+    align-items: center;
+    height: 10%;
+    position: relative;
+}
+
+
+main .banner-home h1 {
+    bottom: 120px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    color: #0d3b3cf2;
+    text-shadow: 2px 1px 2px #1e3f3fbf;
+}
+
+ h1 {
+        margin: 0 0 20px 0;
+        font-weight: 300;
+        font-size: 28px;
+      }
+      
+ p{
+      font-size: 1.4rem;
+      align-items: center;
+      padding-left: 6%;
+      padding:2%;
+ }
+h2{
+    font-size: 2.1rem;
+    padding: 1%;
+}
+
+h3{
+    font-size:2rem;
+    text-align:center;
+    padding-top: 2%;
+}
+
+.titulo1{
+    text-align:center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2%;
+    font-size: 2.5rem;
+    color: #0f661cf2;
+}
+.parrafoHome {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #0d3b3cf2;
+    text-shadow: 0px 1px 2px #1e3f3fbf;
+}
+.parrafo{
+font-size: 1.3rem;
+padding-left:13%;
+}
+.card {
+    width: auto;
+    display: flex;
+    gap: 50px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_perfil {
+    width: 320px;
+}
+.card img {
+    width: 80% ;
+    height: 170px;
+    border-radius: 50px;
+}
+.card_nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.card_nombre img {
+    width: 80%;
+}
+
+.contenedor {
+width: 100%;
+ margin:20px;
+ border-radius: 6px; 
+}
+
+
+.professionals-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.professionals-container .profesionals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profesionals .profesionals-card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.profesionals-card .profesionals-card--social {
+    display: flex;
+}
+
+.profesionals-card .profesionals-card--social i {
+    margin-right: 5px;
+}
+
+#cardiology-md, #psychiatry-md, #radiology-md, #dentist-md, .profesionals-card--social i {
+    color: #4f4a4a;
+}
+
+.profesionals .profesionals-card p {
+    font-weight: bold;
+    color: #0d3b3cf2;
+}
+
+.profesionals .profesionals-card .doctors {
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+    margin-bottom: 10px;
+}
+
+.profesionals .profesionals-card  .doc1 {
+    background: url(.img/doc1.jpeg) center / cover no-repeat; 
+}
+
+.profesionals .profesionals-card  .doc2 {
+    background: url(./img/doc2.jpeg) center / cover no-repeat;
+}
+
+.profesionals .profesionals-card  .doc3 {
+    background: url(./img/doc3.jpeg) center / cover no-repeat;
+}
+
+.profesionals .profesionals-card  .doc4 {
+    background: url(./img/doc4.jpeg) center / cover no-repeat;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    background-color: #000000;
+    color: #001b58;
+    padding: 20px 15px;
+    font-size: 0.9rem;
+    align-self: flex-end;
+}
+
+.f-logo {
+        width: 90%;
+        display: flex;
+        align-self:auto;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .f-logo img {
+        width: 60px;
+    }
+
+    .f-logo div {
+        display: flex;
+        flex-direction: column;
+        color:#dfd8d8;
+    }
+
+    .f-info ul {
+        padding-left: 8px;
+        margin-top: 30px;
+    }
+
+    .f-info ul a {
+        color: #dfd8d8;
+    }
+
+    .f-info ul a li i {
+        margin-right: 10px;
+    }
+    .f-social ul {
+        display: flex;
+    }
+
+    .f-social ul a {
+        margin-right: 10px;
+    }
+
+
+    @media(min-width:1024px){
+        .p{
+            text-align: center;
+        }
+        .h1obs{
+            font-size: 30px;
+        }
+        .presentacion{
+            display:inline-block
+        }
+            .checkbtn{
+                display: block;
+            }
+            .menu-icon{
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+            .nav-menu ul{
+                display: block;
+                position: fixed;
+                top:70px;
+                left:-100%;
+                background: #222;
+                width: 100%;
+                height: 100vh;
+                right: 0;
+            }
+            .nav-menu ul li{
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+            .nav-menu ul li:last-child{
+                background: none;
+                padding: 1rem;
+            }
+            .menu li a {
+                padding: 56px;
+            }
+            .menu li ul {
+                min-width: 220px;
+            } 
+        .card_perfil {
+            width: 1020px;
+        }
+        .card img {
+            width: 325px ;
+            height: 240px;
+        }
+        .card_nombre {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .card h2 {
+            text-align: center;
+            padding: 55px;
+        }
+         }
+         
+        @media (max-width:768px){
+            .checkbtn{
+                display: block;
+            }
+            .menu-icon{
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+            .nav-menu ul{
+                display: block;
+                position: fixed;
+                top:70px;
+                left:-100%;
+                background: #222;
+                width: 100%;
+                height: 100vh;
+                right: 0;
+            }
+            .nav-menu ul li{
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+            .nav-menu ul li:last-child{
+                background: none;
+                padding: 1rem;
+            }
+            .menu li a {
+                padding: 56px;
+            }
+            .menu li ul {
+                min-width: 220px;
+            }
+            .doc{
+                padding: 15px;
+                width: 630px;
+                height: 520px;
+            }
+
+            h2 {
+                text-align: center;
+                padding: 20px;
+               font-size: xx-large;
+            }
+        }
+        @media (max-width:900px) { 
+            .logo-p {
+                display: none;
+            }
+            .checkbtn{
+                display: block;
+            }
+            .menu-icon{
+                display: block;
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+            .nav-menu ul{
+                display: block;
+                position: fixed;
+                top:70px;
+                left:-100%;
+                background: #222;
+                width: 100%;
+                height: 100vh;
+                right: 0;
+            }
+            .nav-menu ul li{
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+            .nav-menu ul li:last-child{
+                background: none;
+                padding: 1rem;
+            }
+            .menu li a {
+                padding: 56px;
+            }
+            .menu li ul {
+                min-width: 220px;
+            }
+            .card_nombre{
+                width:100%;
+            }
+            .h3{
+                padding:20%
+            }
+        }
